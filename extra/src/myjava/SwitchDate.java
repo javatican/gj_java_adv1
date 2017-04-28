@@ -14,8 +14,9 @@ public class SwitchDate {
     public int month = 1;
 
     public void calculateNumDays() {
+        final int one = 1;
         switch (month) {
-            case 1:
+            case one:
             case 3:
             case 5:
             case 7:
@@ -37,5 +38,10 @@ public class SwitchDate {
                 System.out.println("Invalid month.");
                 break;
         }
+    }
+    public static void main(String[] args){
+        SwitchDate sd = new SwitchDate();
+        sd.month=12;
+        sd.calculateNumDays();
     }
 }
