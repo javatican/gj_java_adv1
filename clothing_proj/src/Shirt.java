@@ -1,6 +1,6 @@
 public class Shirt extends Clothing {
 
-    // The color codes are S=Small,M=Medium,L=Large, U=Unset
+    // The fit codes are S=Small,M=Medium,L=Large, U=Unset
     private char fit = 'U';
 
     public Shirt(int itemID, String description, char colorCode, double price, char fit) {
@@ -9,6 +9,7 @@ public class Shirt extends Clothing {
     }
 
     // This method displays the values for an item
+    @Override
     public void display() {
 
         System.out.println("Shirt ID: " + getItemID());
@@ -20,6 +21,7 @@ public class Shirt extends Clothing {
     } // end of display method
 
     
+    @Override
     public void setColorCode(char newCode) {
 
         switch (newCode) {
